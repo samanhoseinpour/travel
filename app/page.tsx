@@ -1,7 +1,13 @@
+import { Hero, Camp, Guide, Features, GetApp } from '@/components';
+
 export default function Home() {
   return (
     <>
-      <h1 className="text-blue-500 font-bold ">NextJS App</h1>
+      <Hero />
+      <Camp />
+      <Guide />
+      <Features />
+      <GetApp />
     </>
   );
 }
