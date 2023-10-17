@@ -1,7 +1,53 @@
-import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { FEATURES } from '@/constants.index';
 
 const Features = () => {
-  return <div>Features</div>;
+  return (
+    <section className="flexCenter flex-col overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
+      <div className="max-container padding-container flex justify-end relative w-full">
+        <div className="flex flex-1 lg:min-h-[900px]">
+          <Image
+            src="/phone.png"
+            alt="phone"
+            width={440}
+            height={1000}
+            className="feature-phone"
+            loading="lazy"
+          />
+        </div>
+        <div className="z-20 flex flex-col w-full lg:w-[60%]">
+          <div className="relative">
+            <Image
+              src="/camp.svg"
+              alt="camp"
+              width={50}
+              height={50}
+              loading="lazy"
+              className="absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]"
+            />
+            <h2 className="bold-40 lg:bold-64">Our Features</h2>
+          </div>
+          <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20">
+            {FEATURES.map((feature, i) => (
+              <li key={i} className="flex flex-1 flex-col items-start w-full">
+                <div className="rounded-full p-4 lg:p-7 bg-green-50">
+                  <Image src={feature?.icon} alt="" width={28} height={28} />
+                </div>
+                <h2 className="bold-20 lg:bold-32 mt-5 capitalize">
+                  {feature?.title}
+                </h2>
+                <p className="regular-16 mt-5 bg-white/80 text-gray-30 lg:mt-[30px] lg:bg-none">
+                  {feature?.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Features;
