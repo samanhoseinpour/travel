@@ -6,6 +6,7 @@ import { Navbar, Footer } from '@/components';
 export const metadata: Metadata = {
   title: 'Travel',
   description: 'Travel UI/UX camping website',
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
