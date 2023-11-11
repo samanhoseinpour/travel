@@ -30,12 +30,14 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:flexCenter hidden">
-        <CustomButton
-          type="button"
-          title="Login"
-          icon="/user.svg"
-          variant="btn_dark_green"
-        />
+        <a href="https://github.com/samanhoseinpour/travel" target="blank">
+          <CustomButton
+            type="button"
+            title="Github"
+            icon="/user.svg"
+            variant="btn_dark_green"
+          />
+        </a>
       </div>
 
       <Image
